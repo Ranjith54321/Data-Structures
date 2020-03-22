@@ -1,9 +1,12 @@
 the below recursive function is the important:
+
 /* Given two trees, return true if they are 
  structurally identical */
+ 
 int identicalTrees(struct node* a, struct node* b) 
 { 
     /*1. both empty */
+    
     if (a==NULL && b==NULL) 
         return 1; 
   
