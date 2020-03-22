@@ -5,6 +5,7 @@ the below recursive function is the important:
  
 int identicalTrees(struct node* a, struct node* b) 
 { 
+    
     /*1. both empty */
     
     if (a==NULL && b==NULL) 
