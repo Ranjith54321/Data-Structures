@@ -1,0 +1,11 @@
+It is a linear data structure and it is abstract data type
+we can access the data only sequencialy and randomly like array
+the main advantage of using liked list is that it is dynamic and easily add and erase data with out any memory related problems
+types of linked list;
+1-> singly 
+2-> doubly
+3-> circular (optional)(same like double extra thing is last->next = head)
+
+lined list is basic for queue, stack , tree and all other concept implementation
+
+links:
