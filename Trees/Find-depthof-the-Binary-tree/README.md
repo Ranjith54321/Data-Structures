@@ -1,9 +1,12 @@
 The below recursive function is important for this operation:
 
 int maxDepth(struct tree *node){
+
     if(!node)
         return 0;
+        
     else{
+    
         int ldepth = maxDepth(node->left);
         int rdepth = maxDepth(node->right);
         
