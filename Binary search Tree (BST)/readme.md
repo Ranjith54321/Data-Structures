@@ -7,3 +7,5 @@ level -> no of node from after root to leaf (i.e,  height-1   this is only for u
 size of the tree -> total no of nodes in the tree
 
 diameter -> leaf to leaf with maximum posible length (see gfg)
+
+here  code searching for only **BST** 
