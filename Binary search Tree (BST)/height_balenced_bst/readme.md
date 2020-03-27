@@ -1,3 +1,8 @@
+check out youtube channels and gfg:
+
+ --> https://www.youtube.com/watch?v=LU4fGD-fgJQ
+
+
 int isBalanced(struct tnode *root)
 {
 	if(!root)
