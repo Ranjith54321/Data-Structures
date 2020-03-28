@@ -4,7 +4,7 @@ check out youtube channels and gfg:
 
 **the ref image**
 
-  ![](images/check_balenced_bst.PNG)
+  ![](https://github.com/Ranjith54321/Data-Structures/blob/master/images/check_balenced_bst.PNG)
 
 ---
 
