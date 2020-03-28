@@ -5,6 +5,8 @@ check out youtube channels and gfg:
 **the ref image**
 
   ![](https://github.com/Ranjith54321/Data-Structures/blob/master/images/check_balenced_bst.PNG)
+  
+  ![](https://github.com/Ranjith54321/Data-Structures/blob/master/images/check_balenced_bst2.jpg)
 
 ---
 
