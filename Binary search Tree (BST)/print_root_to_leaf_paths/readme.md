@@ -3,7 +3,7 @@ here you use stack(int array) then it will became easy
 see the whole above prg then you can under stand
 
 also see https://www.youtube.com/watch?v=zIkDfgFAg60
-```
+```c
 void printPaths(struct node* node) 
 {
 int path[1000];
