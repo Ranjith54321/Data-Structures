@@ -2,14 +2,19 @@ check out youtube channels and gfg:
 
  --> https://www.youtube.com/watch?v=LU4fGD-fgJQ
 
+**the ref image**
 
+  ![](images/check_balenced_bst.PNG)
+
+---
+
+```c
 int isBalanced(struct tnode *root)
 {
 	if(!root)
 	    return 1;
 	int lh = height(root->leftc);
 	int rh = height(root->rightc);
-	
 	if(abs(lh-rh)<=1 && isBalanced(root->leftc) && isBalanced(root->rightc))
 	    return 1;
 	return 0;
@@ -36,3 +41,4 @@ int max(int a, int b)
   return (a >= b)? a: b;
 }
 
+```
