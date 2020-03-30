@@ -47,7 +47,7 @@ void del(int num)
 	arr[i]=arr[n-1];
 	n=n-1;
 	par=(i-1)/2;   /*find parent of node i */
-	if(arr[i] > arr[par])
+	if(arr[i] > arr[par])		// if you delete the random position then it will execute
 	{
 		insert( arr[i],i);
 		return;
