@@ -12,7 +12,7 @@
   
   3.) Now apply deletion for the  created heap then store the deleted element at the last
   
-    but this will take too much time
+  but this will take too much time
     
 ---
 
@@ -21,8 +21,10 @@
  steps:
  
   1.) create heap with the help of given array based on top to down comparision approach then swap
+  
   2.) after done the creation of the heap now, swap the first and last elements 
   
-                            then apply heapify for the 0'th position bcoz we change the root (  this will heapen in side the loop )
+   --------------------------then apply heapify for the 0'th position bcoz we change the root (  this will heapen in side the loop )
+   
   3.) Now we get sorted array
   
