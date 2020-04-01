@@ -1,5 +1,7 @@
 # HeapSort
 
+Link : https://www.geeksforgeeks.org/heap-sort/
+
 1.) Heap sort is one of the good and eficient sorting method in array
 
 ---
