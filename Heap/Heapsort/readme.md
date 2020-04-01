@@ -30,3 +30,20 @@ Link : https://www.geeksforgeeks.org/heap-sort/
    
   3.) Now we get sorted array
   
+  ---
+  
+  # priority Queue :
+  
+   -> It is another application of queue 
+   
+   -> Elementx are accessed and deleted based on their priority given (priority Queue in liked list is different )
+   
+   --------link : https://www.geeksforgeeks.org/priority-queue-using-linked-list/
+   
+   -> still i'm not working on this update when you work
+   
+   -> In heap concept we have Two types of Priority Queue:
+   
+    1.) Smallest Element higher Priority  ( Use Min Heap )
+    2.) Greatest Element Higher Priority  ( Use Max Heap )
+    
