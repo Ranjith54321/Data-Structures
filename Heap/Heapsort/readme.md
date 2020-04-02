@@ -8,13 +8,13 @@ Link : https://www.geeksforgeeks.org/heap-sort/
 
 ***Heapsort method:***
 
-  1.) get the array
+    1.) get the array
   
-  2.) use the given array to build the heap
+    2.) use the given array to build the heap
   
-  3.) Now apply deletion for the  created heap then store the deleted element at the last
+    3.) Now apply deletion for the  created heap then store the deleted element at the last
   
-  but this will take too much time
+    but this will take too much time
     
 ---
 
