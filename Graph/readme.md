@@ -10,7 +10,7 @@
      weighted graph --> edge with it's weight
       
      
-   Graph terminoligies : 
+   Graph terminologies : 
     
         1.)   https://www.geeksforgeeks.org/graph-measurements-length-distance-diameter-eccentricity-radius-center/
         2.)   https://www.techiedelight.com/terminology-and-representations-of-graphs/
