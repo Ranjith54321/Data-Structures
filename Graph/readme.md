@@ -1,4 +1,4 @@
-#Gaph 
+# Gaph #
 
   Graph is a collection of vertices and edges
   
