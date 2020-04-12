@@ -15,4 +15,6 @@
    
    then apply your concept on your way:
    
+   ![](https://github.com/Ranjith54321/Data-Structures/blob/master/images/bfs.jpg)
+   
    
