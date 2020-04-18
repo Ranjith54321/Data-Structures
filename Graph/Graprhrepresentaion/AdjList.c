@@ -4,15 +4,7 @@ struct node{
   int nextnode;
   struct node *link;
 };
-struct stack{
-  int *visited;
-  //int top;
-};
-struct queue
-{
-  int *b;
-  int rear,front;
-};
+
 struct node **createlist(int n){
   struct node **t = (struct node**)malloc(n*sizeof(struct node));
   int i;
@@ -21,21 +13,8 @@ struct node **createlist(int n){
 
   return t;
 }
-struct stack *createstak(int n){
-  struct stack *t = (struct stack*)malloc(sizeof(struct stack));
-  t->visited = (int*)malloc(n*sizeof(int));
-  //t->top = -1;
 
-  return t;
-}
-struct queue *createqueue(int n){
-  struct queue *t = (struct queue*)malloc(sizeof(struct queue));
-  t->b = (int*)malloc(n*sizeof(int));
-  t->front = 0;
-  t->rear = 0;
 
-  return t;
-}
 
 void put(struct node ***list,int s,int e,int n){
   int i,j;
@@ -90,33 +69,6 @@ void print(struct node **list,int n){
     }
 
 }
-int isqueueempty(struct queue *q){
-  if(q->front == q->rear)
-    return 0;
-  else
-    return 1;
-}
-void bfs(struct node **list,struct stack *s,struct queue *q,int pos){
-  s->visited[pos] = 1;
-  q->b[q->rear] = pos;
-  q->rear = q->rear+1;
-
-  while(isqueueempty(q)!=0){
-    pos = q->b[q->front];
-    q->front = q->front+1;
-
-    printf("%d ",pos);
-
-    struct node *p = list[pos]->link;
-    while(p){
-      if(!s->visited[p->nextnode]){
-        s->visited[p->nextnode] = 1;
-        q->b[q->rear] = p->nextnode;
-        q->rear = q->rear+1;
-      }
-      p = p->link;
-    }
-  } 
 
 }
 int main(){
@@ -133,9 +85,6 @@ int main(){
 
   print(list,n);
   
-  struct stack *stack = createstak(n);
-  struct queue *queue = createqueue(n); 
-  bfs(list,stack,queue,0);
 
   return 0;
 }
