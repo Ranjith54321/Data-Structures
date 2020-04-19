@@ -36,4 +36,14 @@
   
   code : https://www.geeksforgeeks.org/union-find-algorithm-set-2-union-by-rank/
   
+  # applications of Union_and_find in Graph datastructure:
+    
+    1) The application is to check whether a given graph contains a cycle or not. 
+    
+    2.) Union-Find Algorithm can be used to check whether an undirected graph contains cycle or not. 
+    
+    --> Note that we have discussed an algorithm to detect cycle. ... 
+    
+     If both the vertices are in the same subset, a cycle is found.
+  
   
