@@ -16,9 +16,12 @@
         2.)   https://www.techiedelight.com/terminology-and-representations-of-graphs/
         
         
-    Graph Representaion:
+   Graph Representaion:
     
           1.) Adgecency Matrix  (when graph is dense)
           2.) Adgecency List     (when graph is sparse)
+         
+    
+   # Graph Traversals 
           
           
