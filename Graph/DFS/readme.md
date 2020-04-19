@@ -1,4 +1,6 @@
 # DFS #
+   
+   ---> It visit's root to leaf 
 
    --> here we use stack for accesing the graph vertex  and use array for checking whether the node is visited or not
     
