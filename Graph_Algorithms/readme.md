@@ -8,12 +8,12 @@
     
        It should visit all nodes in the graph but should not form the cycle with **minimum edge weight**
        
-**1.) MST bsed Algorithms**
+## 1.) MST bsed Algorithms ##
 
     1.) Krushkals Algorithm 
     2.) Prims Algorithm
     
-## 1.) Krushkals Algorithm:  ##
+### 1.1.) Krushkals Algorithm:  ###
 
       1.) Find sortest path that should meet all the nodes woth minimum weight
       
@@ -25,7 +25,7 @@
       
       5.) here we have the set result if cyclic is not formed then add the edge into the result set
       
-### 2.) Prim's Algorithm:   ###
+### 1.2.) Prim's Algorithm:   ###
 
       1.) Here source vertex is given we need to reach all the nodes with minimum over all edge weight
       
@@ -38,7 +38,7 @@
                               
    ----> add image here for prims workout(int my note book)
                    
-   ## SINGLE SOURCE SORTES PATH algorithms:    ##
+ ## 2. SINGLE SOURCE SORTES PATH algorithms:    ##
    
           two famouse algorithms are;
             
@@ -46,6 +46,8 @@
               2.) Bellman-Ford algorithm
              
         ----> here we see **Dijkstra’s shortest path algorithm** 
+   
+   ### 2.1 Dijkstra’s shortest path algorithm ###
    
         1.) It is used to find the sortest path from source to all other vertex (see note book)
         
