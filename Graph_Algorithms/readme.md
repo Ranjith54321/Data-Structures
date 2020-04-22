@@ -31,9 +31,12 @@
       
       2.) here we have two set's
                   
-                   1.) key -> initially all values are INFINITY  (except source key[src]=0)  (to replace minimum edge weight for the nodes)
+                   1.) key -> initially all values are INFINITY  (except source key[src]=0)  
+                              (to replace minimum edge weight for the nodes)
                    2.) set -> initially all values are FALSE  ( this is to know the reached vertex)
-                   parent set is also there for mantain the reached nodes(for display)
+                              parent set is also there for mantain the reached nodes(for display)
+                              
+   ----> add image here for prims workout(int my note book)
                    
    ## SINGLE SOURCE SORTES PATH algorithms:    ##
    
