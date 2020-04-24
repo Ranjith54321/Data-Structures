@@ -70,5 +70,5 @@
             ----> Key offset   (we not see)
         
       (----refer on note book ------)
-   usefull vide : https://www.youtube.com/watch?v=nEcUS90C4fo&feature=emb_logo
+   usefull vide : https://www.youtube.com/watch?v=nEcUS90C4fo&feature=emb_logo (not for Double hashing and offset it contains all others and basic)
         
