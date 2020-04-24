@@ -2,11 +2,11 @@
 
   Hashing is mainly implemented for fastest data searching and retrival purpose
   
-  E.g:
+  E.g: (**Why hashing**)
   
-        IF you have a array you going to apply fastest searching algorithm like binary search it gives O(logn) if best case's
+        IF you have a array you going to apply fastest searching algorithm like binary search it gives O(logn) if in case's
         
-        But in worst case Scenarios it gives O(n) Time complexity
+        But, in worst case Scenarios it gives O(n) Time complexity
         
         So, Hashing Can give O(1) for searching element
         
@@ -57,7 +57,7 @@
     
         The technique which is used to avoid collision is called Collision Resolution Technique's
         
-        1.) Diresct Chaining (or) Separate Chaining  [--> use h(k) = (k+i) % (table_size) then --> array of linked list with ]
+        1.) Diresct Chaining (or) Separate Chaining  [--> use h(k) = (k+i) % (table_size) then --> array of linked list ]
             
         2.) Open Adderssing:
             |
