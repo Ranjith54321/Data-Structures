@@ -9,20 +9,20 @@ int getMiddle(Node *head)
        }
        
        
-   m = (n/2)+1;
-   temp = head;
-   int i=0;
-   while(temp){
-       i++;
-       if(i==m){
-           ans = temp;
-           break;
+       m = (n/2)+1;
+       temp = head;
+       int i=0;
+       while(temp){
+           i++;
+           if(i==m){
+               ans = temp;
+               break;
+           }
+           temp = temp->next;
        }
-       temp = temp->next;
-   }
-   
-   return ans->data;
-}
+
+       return ans->data;
+    }
 
 
  2nd approach:**(recursive)**
