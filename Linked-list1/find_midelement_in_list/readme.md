@@ -1,3 +1,4 @@
+```c
 int getMiddle(Node *head)
 {
 
@@ -24,7 +25,7 @@ int getMiddle(Node *head)
        return ans->data;
     }
 
-
+```
  2nd approach:**(recursive)**
 
 int getMiddle(Node *head)
