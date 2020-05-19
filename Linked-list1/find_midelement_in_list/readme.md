@@ -26,8 +26,8 @@ int getMiddle(Node *head)
     }
 
 ```
- 2nd approach:**(recursive)**
-
+ 2nd approach:**(slow and fast pointers)**
+```c
 int getMiddle(Node *head)
 {
 
@@ -46,3 +46,4 @@ int getMiddle(Node *head)
     return slow->data;
     }
 }
+```
