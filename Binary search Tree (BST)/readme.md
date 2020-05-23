@@ -1,4 +1,27 @@
  for all the below concepts refer **gfg or youtube**:
+
+ 		BST Rules :
+
+ 			-> Left node should br less than the root node 
+
+ 			-> Right node should be greater than the root node
+
+ 			-> Duplicates are not allowed in BST
+
+ 	   For Deletion :
+
+ 	   		Case 1: -> If it is leaf node then no problem simply delete it 
+
+ 	   		Case 2: -> if any one one of the child node is null then replace deleted node with remining node
+
+ 	   		case 3: -> If Node contains two nodes then replace this node's value with inorder successer or inorder predicessor
+
+		 	   		 50                            60
+		           /     \         delete(50)      /   \
+		          40      70       --------->    40    70 
+		                 /  \                            \ 
+		                60   80                           80   here we replaced it with inorder successer
+
  
 1. height or width --> no of nodes from root to leaf
 
