@@ -1,5 +1,5 @@
 
-   #1 AVL TREE : 
+   # AVL TREE : 
 
 	--> it is a updated version of BST 
 	--> the main use of BST is to assecc the elements in logerthemic time 
@@ -28,11 +28,11 @@
 
 		    but in AVL we can achive O(logh) for all the elements even in worst case  
 
-  #2 Rotation's in AVL tree 
+  ## Rotation's in AVL tree 
 
    **To maintain the balance factor -1 , 0 , 1 we need this kind of rotations**
 
- # 1.) LEFT LEFT case :
+ ### 1.) LEFT LEFT case :
 
 		  		T1, T2, T3 and T4 are subtrees.
 	         z                                      y 
@@ -43,7 +43,7 @@
 	    / \
 	  T1   T2
 
- # 2.) RIGHT RIGHT case : 
+ ### 2.) RIGHT RIGHT case : 
 
 		  z                                y
 		 /  \                            /   \ 
@@ -53,7 +53,7 @@
 		       / \
 		     T3  T4
 
- # 3.) LEFT RIGHT case :
+ ### 3.) LEFT RIGHT case :
 
 		     z                               z                           x
 		    / \                            /   \                        /  \ 
@@ -63,7 +63,7 @@
 		    / \                        / \
 		  T2   T3                    T1   T2
 
- # 4.) RIGHT LEFT case :
+ ### 4.) RIGHT LEFT case :
 
 		   z                            z                            x
 		  / \                          / \                          /  \ 
@@ -74,7 +74,7 @@
 		T2   T3                           T3   T4
 
 
-   **Deletion**
+   ### **Deletion**
 
 	--> Deletion is very similar to the BST deletion 
    
