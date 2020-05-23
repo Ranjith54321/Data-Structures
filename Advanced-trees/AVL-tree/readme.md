@@ -84,8 +84,8 @@
 
 	 --> in height update :
 
-          ```
-	   struct Node *rightRotate(struct Node *y) 
+```
+	struct Node *rightRotate(struct Node *y) 
 		{ 
 		   struct Node *x = y->left; 
 		   struct Node *T2 = x->right; 
@@ -103,7 +103,7 @@
 		    return x; 
 		} 
 
-		```
+  ```
 
  --> avl tree passing reference see care fully note code 
 
