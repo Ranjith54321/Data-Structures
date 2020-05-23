@@ -1,12 +1,12 @@
 
-	#1 AVL TREE
+   #1 AVL TREE : 
 
-		--> it is a updated version of BST 
-		--> the main use of BST is to assecc the elements in logerthemic time 
-		--> but this will not be acheived in all cases
+	--> it is a updated version of BST 
+	--> the main use of BST is to assecc the elements in logerthemic time 
+	--> but this will not be acheived in all cases
 
 		eg 1: 
-					    30 
+				   30 
 			           /  \ 
 			         20   40 
 			        /  \     \ 
@@ -17,22 +17,22 @@
 		eg 2:        10 
 		              \ 
 		              20 
-		         		\
-		         		25
+		         	\
+		         	25
 		                 \ 
 		                 30
-		       			   \
-		       			   40
-		       			     \
-		       			     50   here searching 50 it takes O(h)   
+		       		   \
+		       		   40
+		       		     \
+		       		     50   here searching 50 it takes O(h)   
 
 		    but in AVL we can achive O(logh) for all the elements even in worst case  
 
-	#2 Rotation's in AVL tree 
+  #2 Rotation's in AVL tree 
 
-	  To maintain the balance factor -1 , 0 , 1 we need this kind of rotations
+   **To maintain the balance factor -1 , 0 , 1 we need this kind of rotations**
 
-	  1.) LEFT LEFT case :
+ # 1.) LEFT LEFT case :
 
 		  		T1, T2, T3 and T4 are subtrees.
 	         z                                      y 
@@ -43,7 +43,7 @@
 	    / \
 	  T1   T2
 
-	  2.) RIGHT RIGHT case : 
+ # 2.) RIGHT RIGHT case : 
 
 		  z                                y
 		 /  \                            /   \ 
@@ -53,7 +53,7 @@
 		       / \
 		     T3  T4
 
-	   3.) LEFT RIGHT case :
+ # 3.) LEFT RIGHT case :
 
 		     z                               z                           x
 		    / \                            /   \                        /  \ 
@@ -63,7 +63,7 @@
 		    / \                        / \
 		  T2   T3                    T1   T2
 
-		4.) RIGHT LEFT case :
+ # 4.) RIGHT LEFT case :
 
 		   z                            z                            x
 		  / \                          / \                          /  \ 
@@ -74,36 +74,37 @@
 		T2   T3                           T3   T4
 
 
-		** Deletion **
+   **Deletion**
 
-			Deletion is very similar to the BST deletion 
+	--> Deletion is very similar to the BST deletion 
+   
+	--> but at each delete operaration we need to maintain the height of the corresponding node's
 
-			but at each delete operaration we need to maintain the height of the corresponding node's
+	--> see the source code very carefully 
 
-			see the source code very carefully 
-
-			in height update :
+	 --> in height update :
 
           ```
-			struct Node *rightRotate(struct Node *y) 
-				{ 
-					struct Node *x = y->left; 
-					struct Node *T2 = x->right; 
+	   struct Node *rightRotate(struct Node *y) 
+		{ 
+		   struct Node *x = y->left; 
+		   struct Node *T2 = x->right; 
 
-					// Perform rotation 
-					x->right = y; 
-					y->left = T2; 
+		   // Perform rotation 
+		   x->right = y; 
+		   y->left = T2; 
+                 
+		   // Update heights 		// see care fully 
+		   y->height = max(height(y->left), height(y->right))+1;   // which node is modified here y then start to update 
+		   									//that height firts
+		   x->height = max(height(x->left), height(x->right))+1; // then only we can update it parent i,e x's height  
 
-					// Update heights 										// see care fully 
-					y->height = max(height(y->left), height(y->right))+1;   // which node is modified here y then start to update 	that height firts
-					x->height = max(height(x->left), height(x->right))+1; 		// then only we can update it parent i,e x's height  
+		    // Return new root 
+		    return x; 
+		} 
 
-					// Return new root 
-					return x; 
-				} 
+		```
 
-				```
+ --> avl tree passing reference see care fully note code 
 
-			--> avl tree passing reference see care fully note code 
-
-			--> see gfg code(avl_insertion_and_deletion) and avl_refence passing care fully 
+  --> see gfg code(avl_insertion_and_deletion) and avl_refence passing care fully 
