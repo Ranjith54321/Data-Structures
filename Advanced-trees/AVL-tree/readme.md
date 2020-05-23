@@ -30,7 +30,7 @@
  ### Balance Factor
 	--> Balance factor of a node in an AVL tree is the difference between 
 		the height of the left subtree and that of the right subtree of that node.
-	--> Balance Factor = (Height of Left Subtree - Height of Right Subtree) or (Height of Right Subtree - Height of Left Subtree)
+	--> Balance Factor = (Height of Left Subtree - Height of Right Subtree)
 	--> The self balancing property of an avl tree is maintained by the balance factor. 
 	--> The value of balance factor should always be -1, 0 or +1.
 
