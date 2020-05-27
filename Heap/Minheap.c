@@ -1,119 +1,109 @@
-# include <stdio.h>
-int arr[100],n;
+#include <stdio.h>
 
-void display()
-{       int i;
-	if(n==0)
-	{
-		printf("Heap is empty\n");
-		return;
-	}
+void display(int *array, int n)
+{
+	int i;
 	for(i=0;i<n;i++)
-		printf("%d ",arr[i]);
+	    printf("%d ",array[i]);
 	printf("\n");
-}/*End of display()*/
-
-void insert(int num,int loc)
+}
+ 
+void insert(int *array, int num, int location)
 {
-	int par;
-	while(loc>0)
-	{
-		par=(loc-1)/2;
-		if(num>=arr[par])
-		{
-			arr[loc]=num;
-			return;
-		}
-		arr[loc]=arr[par];
-		loc=par;
-	}/*End of while*/
-	arr[0]=num; /*assign num to the root node */
-}/*End of insert()*/
-
-void del(int num)
+	int p;
+	while(location>0){
+	    p = (location-1)/2;
+	    if(num>=array[p]){
+	        array[location] = num;
+	        return;
+	    }
+	    array[location] = array[p];
+	    location = p;
+	}
+	array[0] = num;
+}
+ 
+void delete(int *array,int num, int *n)
 {
-	int left,right,i,temp,par;
+	int p,l,r,t,i;
+	for(i=0;i<(*n);i++){
+	    if(array[i]==num)
+	        break;
+	}
+	if(array[i]!=num){
+	    printf("%d not found in heap list\n",num);
+	    return;
+	}
+	array[i] = array[(*n)-1];
+	*n = (*n)-1;
+	p = (i-1)/2;
+	if(array[i]<array[p]){
+	    insert(array,array[i],i);
+	    return;
+	}
+	l = 2*i+1;
+	r = 2*i+2;
+	while(r<(*n)){
+	    if(array[i]<=array[l] && array[i]<=array[r])
+	        return;
+	    if(array[r]>=array[l]){    // always concentrate here order should be same
+	        t = array[i];
+	        array[i] = array[l];
+	        array[l] = t;
+	        i = l;
+	    }
+	    else{
+	        t = array[i];
+	        array[i] = array[r];
+	        array[r] = t;
+	        i = r;
+	    }
+	    l = 2*i+1;
+	    r = 2*i+2;
+	}
+	if(l==(*n)-1 && array[i]>array[l]){
+	    t = array[i];
+	    array[i] = array[l];
+	    array[l] = t;
+	}
+	return;
+}
 
-	for(i=0;i<n;i++)
-	{
-		if(num==arr[i])
-		break;
-	}
-	if( num!=arr[i] )
-	{
-		printf("%d not found in heap\n",num);
-		return;
-	}
-	arr[i]=arr[n-1];
-	n=n-1;
-	par=(i-1)/2;   /*find parent of node i */
-	if(arr[i] < arr[par])      // if you delete the random position then it will execute
-	{
-		insert( arr[i],i);
-		return;
-	}
-	left=2*i+1;  /*left child of i*/
-	right=2*i+2; /* right child of i*/
-	while(right < n)
-	{
-		if( arr[i]<=arr[left] && arr[i]<=arr[right] )
-			return;
-		if( arr[right]>=arr[left] )
-		{
-			temp=arr[i];
-			arr[i]=arr[left];
-			arr[left]=temp;
-			i=left;
-		}
-		else
-		{
-			temp=arr[i];
-			arr[i]=arr[right];
-			arr[right]=temp;
-			i=right;
-		}
-		left=2*i+1;
-		right=2*i+2;
-	}/*End of while*/
-	if( left==n-1 && arr[i]>arr[left] ) /* right==n */
-	{	temp=arr[i];
-		arr[i]=arr[left];
-		arr[left]=temp;
-	}
-}/*End of del()*/
-
-main()
+int main()
 {
-	int choice,num;
-	n=0;/*Represents number of nodes in the heap*/
+	int array[100], n;
+	int choice, num;
+	n = 0;/*Represents number of nodes in the heap*/
 	while(1)
 	{
-		printf("1.Insert\n");
-		printf("2.Delete\n");
-		printf("3.Display\n");
-		printf("4.Quit\n");
-		printf("Enter your choice : ");
-		scanf("%d",&choice);
+		printf("1.Insert the element \n");
+		printf("2.Delete the element \n");
+		printf("3.Display all elements \n");
+		printf("4.Quit \n");
+		printf("Enter your choice :\n");
+		scanf("%d", &choice);
 		switch(choice)
 		{
-		 case 1:
-			printf("Enter the number to be inserted : ");
-			scanf("%d",&num);
-			insert(num,n);
-			n=n+1;
-			break;
-		 case 2:
-			printf("Enter the number to be deleted : ");
-			scanf("%d",&num);
-			del(num);
-			break;
-		 case 3:
-			display();
-			break;
-		 case 4:
-            break;
-		 default:
-			printf("Wrong choice\n");
-		}/*End of switch */
+			case 1:
+				printf("Enter the element to be inserted to the list :\n");
+				scanf("%d", &num);
+				insert(array,num, n);
+				n = n + 1;
+				break;
+			case 2:
+				printf("Enter the element to be deleted from the list :\n");
+				scanf("%d", &num);
+				delete(array,num,&n);
+				//n = n - 1;
+				break;
+			case 3:
+				display(array,n);
+				break;
+			case 4:
+				return 0;
+			default:
+				printf("Invalid choice\n");
+		}/*End  of switch */
 	}/*End of while */
-}/*End of main()*/
+	return 0;
+}
