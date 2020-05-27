@@ -18,7 +18,7 @@ Link : https://www.geeksforgeeks.org/heap-sort/
     
 ---
 
- -> Here above code we use ***Heapify** method to reduce the time
+ -> Here above code we use ***Heapify*** method to reduce the time
  
  steps:
  
