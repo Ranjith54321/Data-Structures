@@ -1,119 +1,115 @@
-# include <stdio.h>
-int arr[100],n;
+#include <stdio.h>
 
-void display()
-{       int i;
-	if(n==0)
-	{
-		printf("Heap is empty\n");
-		return;
-	}
-	for(i=0;i<n;i++)
-		printf("%d ",arr[i]);
-	printf("\n");
-}/*End of display()*/
-
-void insert(int num,int loc)
+void display(int *array, int n)
 {
-	int par;
-	while(loc>0)
-	{
-		par=(loc-1)/2;
-		if(num<=arr[par])
-		{
-			arr[loc]=num;
-			return;
-		}
-		arr[loc]=arr[par];
-		loc=par;
-	}/*End of while*/
-	arr[0]=num; /*assign num to the root node */
-}/*End of insert()*/
-
-void del(int num)
+	if(n==0){
+	    printf("Heap is empty");
+    }
+    else{
+        int i;
+        for(i=0;i<n;i++){
+            printf("%d ",array[i]);
+        }
+    }
+    printf("\n");
+}
+ 
+void insert(int *array, int num, int loc)
 {
-	int left,right,i,temp,par;
-
-	for(i=0;i<n;i++)
-	{
-		if(num==arr[i])
-		break;
-	}
-	if( num!=arr[i] )
-	{
-		printf("%d not found in heap\n",num);
-		return;
-	}
-	arr[i]=arr[n-1];
-	n=n-1;
-	par=(i-1)/2;   /*find parent of node i */
-	if(arr[i] > arr[par])		// if you delete the random position then it will execute
-	{
-		insert( arr[i],i);
-		return;
-	}
-	left=2*i+1;  /*left child of i*/
-	right=2*i+2; /* right child of i*/
-	while(right < n)
-	{
-		if( arr[i]>=arr[left] && arr[i]>=arr[right] )
-			return;
-		if( arr[right]<=arr[left] )
-		{
-			temp=arr[i];
-			arr[i]=arr[left];
-			arr[left]=temp;
-			i=left;
+		int p;
+		while(loc>0){
+		    p = (loc-1)/2;
+		    if(num<=array[p]){
+		        array[loc] = num;
+		        return;
+		    }
+		    array[loc] = array[p];
+		    loc = p;
 		}
-		else
-		{
-			temp=arr[i];
-			arr[i]=arr[right];
-			arr[right]=temp;
-			i=right;
-		}
-		left=2*i+1;
-		right=2*i+2;
-	}/*End of while*/
-	if( left==n-1 && arr[i]<arr[left] ) /* right==n */
-	{	temp=arr[i];
-		arr[i]=arr[left];
-		arr[left]=temp;
-	}
-}/*End of del()*/
-
-main()
+		array[0] = num;
+}
+ 
+void delete(int *array,int num, int *n)
 {
-	int choice,num;
-	n=0;/*Represents number of nodes in the heap*/
+		int i,right,left,p,t;
+		for(i=0;i<(*n);i++){
+		    if(num==array[i]){
+		        break;
+		    }
+		}
+		if(array[i]!=num){
+		    printf("%d not found in heap list\n",num);
+		    return;
+		}
+		array[i] = array[(*n)-1];
+		(*n) = (*n)-1;
+		p = (i-1)/2;
+		if(array[i]>array[p]){
+		    insert(array,array[i],i);
+		    return;
+		}
+		left = 2*i+1;
+		right = 2*i+2;
+		while(right<(*n)){
+		    if(array[right]<=array[i] && array[left]<=array[i])
+		        return;
+		    if(array[right]>=array[left]){ // here order shoild be same
+		        t = array[right];
+		        array[right] = array[i];
+		        array[i] = t;
+		        i = right;
+		    }
+		    else{
+		        t = array[left];
+		        array[left] = array[i];
+		        array[i] = t;
+		        i = left;
+		    }
+		    left = 2*i+1;
+		    right = 2*i+2;
+		}
+		if(left==(*n)-1 && array[left]>array[i]){
+		        t = array[left];
+		        array[left] = array[i];
+		        array[i] = t;
+		}
+}
+
+int main()
+{
+	int array[100], n;
+	int choice, num;
+	n = 0;/*Represents number of nodes in the heap*/
 	while(1)
 	{
-		printf("1.Insert\n");
-		printf("2.Delete\n");
-		printf("3.Display\n");
-		printf("4.Quit\n");
-		printf("Enter your choice : ");
-		scanf("%d",&choice);
+		printf("1.Insert the element \n");
+		printf("2.Delete the element \n");
+		printf("3.Display all elements \n");
+		printf("4.Quit \n");
+		printf("Enter your choice :\n");
+		scanf("%d", &choice);
 		switch(choice)
 		{
-		 case 1:
-			printf("Enter the number to be inserted : ");
-			scanf("%d",&num);
-			insert(num,n);
-			n=n+1;
-			break;
-		 case 2:
-			printf("Enter the number to be deleted : ");
-			scanf("%d",&num);
-			del(num);
-			break;
-		 case 3:
-			display();
-			break;
-		 case 4:
-            break;
-		 default:
-			printf("Wrong choice\n");
-		}/*End of switch */
-	}/*End of while */
-}/*End of main()*/
+			case 1:
+				printf("Enter the element to be inserted to the list :\n");
+				scanf("%d", &num);
+				insert(array,num, n);
+				n = n + 1;
+				break;
+			case 2:
+				printf("Enter the elements to be deleted from the list :\n");
+				scanf("%d", &num);
+				delete(array,num,&n);
+				//n = n - 1;
+				break;
+			case 3:
+				display(array,n);
+				break;
+			case 4:
+				return 0;
+			default:
+				printf("Invalid choice\n");
+		}
+	}
+	return 0;
+}
