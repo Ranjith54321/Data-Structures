@@ -6,7 +6,7 @@
  
  1.)min heap 
  
-             10                      10
+            10                      10
          /      \               /       \  
        20        100          15         30  
       /                      /  \        /  \
@@ -15,19 +15,20 @@
  
  2.) Max Heap:
         
-             100                    100
+            100                    100
          /      \               /       \  
-       30        10          50         40  
+       30        10           50         40  
       /                      /  \        /  \
     20                     40    15    10   30
     
     
-     --
-     ** below are common for both the types **
+    
+  --
+  **below are common for both the types**
      
 # Insertion
 
-      -> **Bottom - up approach**
+  **Bottom - up approach**
       
       1. **Bottom - up approach** like how to we add in binary tree then you have to follow the heap property based on min or max heap
       
@@ -35,7 +36,7 @@
       
 # Deletion
     
-      -> **Top to Down approach**
+   **Top to Down approach**
       
       1. replace target node's value by last node's (n-1 th node) value then delete then n-1 th node
       
