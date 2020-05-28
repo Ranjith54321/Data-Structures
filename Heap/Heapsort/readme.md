@@ -30,6 +30,32 @@ Link : https://www.geeksforgeeks.org/heap-sort/
    
   3.) Now we get sorted array
   
+  ```c
+      void heapSort(int arr[], int n) 
+    { 
+        // Build heap (rearrange array) 
+        for (int i = n / 2 - 1; i >= 0; i--)   // at the first time of the heap creation it is enough to check last before the nodes
+            heapify(arr, n, i);                // after the end of this loop the max heap would build
+
+        // One by one extract an element from heap 
+        for (int i=n-1; i>0; i--)               // after creation of the max-heap replace laste elemnt with first element then check 
+        {                                                                                           // heap condition
+            // Move current root to end 
+            swap(arr[0], arr[i]); 
+
+            // call max heapify on the reduced heap 
+            heapify(arr, i, 0); 
+        } 
+    } 
+  ```          
+                [12, 11, 13, 5, 6, 7]
+                     12(0)
+                    /     \
+                 11(1)     13(2)   // start here to check the child then swap the nodes 
+                /   \       /
+             5(3)    6(4)  7(5)    //  on need to check here for thr first time 
+
+  
   ---
   
   # priority Queue :
