@@ -13,7 +13,8 @@
    Graph terminologies : 
     
    1.)   [GEEKS FOR GEEKS](https://www.geeksforgeeks.org/graph-measurements-length-distance-diameter-eccentricity-radius-center/)
-   2.)   [TERMINOLOGY](https://www.techiedelight.com/terminology-and-representations-of-graphs/)
+   2.)   [GEEKS FOR GEEKS](https://www.geeksforgeeks.org/mathematics-walks-trails-paths-cycles-and-circuits-in-graph/)
+   3.)   [TERMINOLOGY](https://www.techiedelight.com/terminology-and-representations-of-graphs/)
         
         
    Graph Representaion:
