@@ -18,7 +18,7 @@
  	   					inorder successer(small node right sub-tree) or inorder predicessor(bigger node in left sub-tree)
  	   					 we commenly use inorder successor
 
-		 	   		 50                            60
+		 	      50                            60
 		           /     \         delete(50)      /   \
 		          40      70       --------->    40    70 
 		                 /  \                            \ 
