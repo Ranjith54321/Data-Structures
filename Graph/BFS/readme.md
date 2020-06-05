@@ -4,7 +4,7 @@
   
   --> we use **queue** for storing next vertex to traverse and **array** (of size -> no.of vertex) for checking whether the node is visited or not
   
-  --> if you are youing adj list to perform BFS operation it works based on the insertion not based on left or right side moving 
+  --> if you are trying adj list to perform BFS operation it works based on the insertion not based on left or right side moving 
       
    bcoz we have linked lost not tree
                           
