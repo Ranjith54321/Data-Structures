@@ -67,8 +67,8 @@ struct node ** convmattolist(int **A,int rows,char *dir)
 {    
     struct node **t,*p,*cu;
     int i,j;
-    t = (struct node**)malloc(sizeof(struct node*));
-    for(i=0;i<rows;i++){
+    t = (struct node**)malloc(sizeof(struct node*)); // t = (struct node**)malloc(rows*sizeof(struct node*)) 
+    for(i=0;i<rows;i++){			// above is also valid
         t[i] = (struct node*)malloc(sizeof(struct node));
     }
 	for(i=0;i<rows;i++){
