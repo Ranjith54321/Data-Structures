@@ -7,7 +7,7 @@
   --> if you are trying adj list to perform BFS operation it works based on the insertion not based on left or right side moving 
       
    bcoz we have linked-list not tree
-                          
+  --> here stack is not actual stack(operation) consider it as a set
                           
    see the video : https://www.youtube.com/watch?v=mXUZ3jeaQLo&t=1379s
    
