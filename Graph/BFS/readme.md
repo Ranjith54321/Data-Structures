@@ -6,7 +6,7 @@
   
   --> if you are trying adj list to perform BFS operation it works based on the insertion not based on left or right side moving 
       
-   bcoz we have linked lost not tree
+   bcoz we have linked-list not tree
                           
                           
    see the video : https://www.youtube.com/watch?v=mXUZ3jeaQLo&t=1379s
