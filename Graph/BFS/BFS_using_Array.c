@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 int isempty(int f,int r){ return (f==r)?1:0;}
 void bfs(int **g,int *size,int *visit,int n,int st){
 	int i;
