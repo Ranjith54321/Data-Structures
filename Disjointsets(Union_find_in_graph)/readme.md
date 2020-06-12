@@ -18,7 +18,7 @@
     
  # materials : 
  
-   refer  this oreder   **for the below two mwthods see the array operation carefully**
+   refer  this oreder   **for the below two methods see the array operation carefully**
  
  **1.) for Navie approach :** **O(n)**
         
