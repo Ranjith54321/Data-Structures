@@ -34,10 +34,8 @@ here we implement Trie using java,
         root = new TrieNode();
     }
 ```
+[youtube-video-link](https://www.youtube.com/watch?v=AXjmTQ8LEoI&t=482s)
 
 **see the code and compare with this image**
 
 ![](https://github.com/Ranjith54321/Data-Structures/blob/master/images/Trie.jpg)
-
-[youtube-video-link](https://www.youtube.com/watch?v=AXjmTQ8LEoI&t=482s)
-
