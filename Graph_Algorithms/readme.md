@@ -36,7 +36,7 @@
                    2.) set -> initially all values are FALSE  ( this is to know the reached vertex)
                               parent set is also there for mantain the reached nodes(for display)
                               
-   ----> add image here for prims workout(int my note book)
+   ----> ![Prims](https://github.com/Ranjith54321/Data-Structures/blob/master/images/Prims.jpg)
                    
  ## 2. SINGLE SOURCE SORTES PATH algorithms:    ##
    
