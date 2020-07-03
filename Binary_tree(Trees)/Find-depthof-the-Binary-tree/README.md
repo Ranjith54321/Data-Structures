@@ -1,5 +1,5 @@
 The below recursive function is important for this operation:
-'''c
+```c
 int maxDepth(struct tree *node){
     if(!node)
         return 0;
@@ -15,7 +15,7 @@ int maxDepth(struct tree *node){
             return rdepth+1;
     }
 }
-'''
+```
 
 You can work out and know how to work or use c_code_visualizer to know the work flow
 
