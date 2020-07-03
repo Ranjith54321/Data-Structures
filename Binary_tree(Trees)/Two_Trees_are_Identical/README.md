@@ -2,7 +2,7 @@ the below recursive function is the important:
 
 /* Given two trees, return true if they are 
  structurally identical */
- 
+ ```c
 int identicalTrees(struct node* a, struct node* b) 
 { 
     
@@ -25,6 +25,7 @@ int identicalTrees(struct node* a, struct node* b)
     /* 3. one empty, one not -> false */
     return 0; 
 } 
+```
 
 source:
 https://www.geeksforgeeks.org/write-c-code-to-determine-if-two-trees-are-identical/
