@@ -90,7 +90,7 @@
 
 	 --> in height update :
 
-```
+```c
 	struct Node *rightRotate(struct Node *y) 
 		{ 
 		   struct Node *x = y->left; 
