@@ -10,7 +10,7 @@ Link : https://www.geeksforgeeks.org/heap-sort/
 
     1.) get the array
   
-    2.) use the given array to build the heap
+    2.) use the given array to build the *Max* heap
   
     3.) Now apply deletion for the  created heap then store the deleted element at the last
   
