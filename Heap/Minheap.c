@@ -46,7 +46,7 @@ void delete(int *array,int num, int *n)
 	while(r<(*n)){
 	    if(array[i]<=array[l] && array[i]<=array[r])
 	        return;
-	    if(array[r]>=array[l]){    // always concentrate here order should be same
+	    if(array[r]>=array[l]){    // always concentrate here order should be same compare between two childern not with parent
 	        t = array[i];
 	        array[i] = array[l];
 	        array[l] = t;
