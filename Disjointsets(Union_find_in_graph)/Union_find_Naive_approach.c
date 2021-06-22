@@ -39,7 +39,7 @@ int find(int parent[], int i)
 }
  
 // A utility function to do union of two subsets
-void Union(int parent[], int x, int y)
+void Union(int parent[], int x, int y) // important note : don't use union bcoz union (will show error) is a key word available in c so use Union 
 {
 	int xset = find(parent,x);
 	int yset = find(parent,y);
