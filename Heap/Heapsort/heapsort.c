@@ -37,16 +37,18 @@ void heapify(int arr[], int n, int i)
 // main function to do heap sort 
 void heapSort(int arr[], int n) 
 { 
-	// Build heap (rearrange array) 
+	// 2. Build MAX heap (rearrange array) 
 	for (int i = n / 2 - 1; i >= 0; i--){ 
-		printf("i = %d ",i);
+		//printf("i = %d ",i);
 		heapify(arr, n, i); 
 	}
-	printf("\n");
-	for (int i = 0; i < n; i++){ 
-		printf("%d ",arr[i]); 
-	}
-	// One by one extract an element from heap 
+	
+	//printf("\n");
+	//for (int i = 0; i < n; i++){ 
+	//	printf("%d ",arr[i]); 
+	//}
+	
+	//3.  apply deletion for the  created heap then store the deleted element at the last
 	for (int i=n-1; i>=0; i--) 
 	{ 
 		// Move current root to end 
@@ -68,7 +70,7 @@ void printArray(int arr[], int n)
 // Driver program 
 int main() 
 { 
-	int arr[] = {12, 11, 13, 5, 6, 7}; 
+	int arr[] = {12, 11, 13, 5, 6, 7}; // 1. get the Array
 	int n = sizeof(arr)/sizeof(arr[0]); 
 
 	heapSort(arr, n); 
