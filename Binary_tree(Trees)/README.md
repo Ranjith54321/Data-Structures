@@ -1,4 +1,4 @@
-The code is placed here are dynamically creating nodes and do operation 
+The code is placed here are dynamically creating nodes.
 
 in geeks for geeks see only concept they are static node creation
 
